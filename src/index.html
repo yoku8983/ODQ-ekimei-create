@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小田急駅名標ジェネレーター</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 style="font-size: 2.5em; font-weight: bold; text-transform: uppercase; text-align: center; margin: 20px 0;">
+            小田急駅名標ジェネレーター
+        </h1>
+        <p style="font-size: 1em; text-align: center; margin: 10px 20px; line-height: 1.5;">
+            小田急の駅名標を作成できます。現行版のデザイン準拠。フォントは一部現物と異なります、ご了承ください。</br>
+            駅名が短い場合は横幅カツカツになってしまうので、入力フォームに適宜スペースを入れて調整してください（現在改良中）。</br>
+            商用非商用を問わず利用、転載、改変は自由ですが、自作発言や再配布はお断りします。転載利用時の連絡、クレジット追記も不要です。</br>
+        </p>
+    </header>
+    <!-- 入力フォーム -->
+    <div class="form">
+        <label>駅名（漢字）: <input type="text" id="stationNameKanji" value="はるひ野" /></label><br />
+        <label>駅名（ひらがな）: <input type="text" id="stationNameHiragana" value="はるひの" /></label><br />
+        <label>駅名（ローマ字）: <input type="text" id="stationNameRomaji" value="Haruhino" /></label><br />
+        <br />
+        <label>前駅名（漢字）: <input type="text" id="previousStationNameKanji" value="黒川" /></label><br />
+        <label>前駅名（ローマ字）: <input type="text" id="previousStationNameRomaji" value="Kurokawa" /></label><br />
+        <br />
+        <label>次駅名（漢字）: <input type="text" id="nextStationNameKanji" value="小田急永山" /></label><br />
+        <label>次駅名（ローマ字）: <input type="text" id="nextStationNameRomaji" value="Odakyu-Nagayama" /></label><br />
+        <br />
+        <label>現在駅ナンバリング（路線記号）: <input type="text" id="currentStationSymbol"  class="small-input"  value="OT" /></label><br />
+        <label>現在駅ナンバリング（数字）: <input type="text" id="currentStationNumber"  class="small-input"  value="04" /></label><br />
+        <label>次駅ナンバリング（路線記号）: <input type="text" id="nextStationSymbol"  class="small-input"  value="OT" /></label><br />
+        <label>次駅ナンバリング（数字）: <input type="text" id="nextStationNumber"  class="small-input"  value="05" /></label><br />
+        <button id="generateButton">駅名標を生成</button>
+        <button id="saveButton">画像を保存</button>
+    </div>
+
+    <!-- Canvasエリア -->
+    <!-- Canvasをレスポンシブで縮小表示できるようにdivでラップ -->
+    <div class="canvas-container">
+        <canvas id="stationCanvas"></canvas>
+    </div>
+
+    <footer>
+        <p>© 2024 Nu
+        </p>
+    </footer>
+
+    <!-- スクリプト -->
+    <script src="script.js"></script>
+</body>
+</html>

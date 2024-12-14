@@ -1,0 +1,60 @@
+/* フォントの読み込み */
+@font-face {
+    font-family: 'FrutigerBold';
+    src: url('fonts/Frutiger-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mplus2c';
+    src: url('fonts/Mplus2c-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'VialogLT';
+    src: url('fonts/VialogLT-Regular.ttf') format('truetype');
+}
+
+/* 基本スタイル */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+.small-input {
+    width: 50px; /* 小さいサイズを指定 */
+    padding: 1px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 20px; /* 上に余白を追加 */
+    padding: 10px;    /* 内側の余白を追加 */
+    background-color: #f0f0f0; /* 背景色をつける場合 */
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.canvas-container {
+    max-width: 1200px; /* 横幅を1200pxに制限 */
+    margin: 0 auto; /* 中央揃え */
+}
+
+canvas {
+    width: 100%; /* 親要素の幅に合わせる */
+    height: auto; /* 縦横比を保持する */
+    display: block; /* 不要な余白を削除 */
+    border: 1px solid #ccc; /* デバッグ用に枠線を追加 */
+}
