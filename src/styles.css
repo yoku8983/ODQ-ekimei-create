@@ -17,15 +17,59 @@
 /* 基本スタイル */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    text-align: left;
     margin: 20px;
 }
 
-.small-input {
-    width: 50px; /* 小さいサイズを指定 */
-    padding: 1px;
+/* 全体のコンテナ */
+.form {
+    margin: 20px; /* 上下左右にマージンを追加 */
+    padding: 10px;
+    max-width: 600px; /* 全体の幅を固定 */
+}
+
+/* 各行のスタイル */
+.form-row {
+    display: flex;
+    align-items: center; /* ラベルと入力欄を縦方向で中央揃え */
+    margin-bottom: 15px; /* 各行間に余白 */
+    white-space: nowrap; /* 改行を防止 */
+}
+
+/* ラベルのスタイル */
+.form-label {
+    flex: 0 0 240px; /* ラベルの固定幅 */
+    text-align: left; /* 左揃え */
     font-size: 14px;
-    box-sizing: border-box;
+    font-weight: bold;
+}
+
+/* 入力欄のスタイル */
+.form-input {
+    flex: 0 0 150px; /* 固定幅の入力欄 */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* パディングを含むサイズ計算 */
+    margin-right: 10px; /* 各入力欄の間にスペースを追加 */
+}
+
+/* 最後の入力欄の余白を削除 */
+.form-input:last-child {
+    margin-right: 0;
+}
+
+/* 小さな入力欄のスタイル */
+.form-input.small-input {
+    width: 130px; /* 横幅を調整 */
+}
+
+.small-input {
+    padding: 5px; /* 内側の余白を小さく */
+    text-align: left; /* テキストを中央揃え */
+    margin-right: 10px; /* 間隔を調整 */
+    font-size: 14px; /* 必要に応じてフォントサイズを調整 */
 }
 
 
@@ -36,15 +80,21 @@ footer {
     background-color: #f0f0f0; /* 背景色をつける場合 */
 }
 
-.form {
-    margin-bottom: 20px;
-}
 
 button {
     margin: 10px;
     padding: 10px 20px;
     font-size: 14px;
     cursor: pointer;
+    background-color: #028CD4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0269A3;
 }
 
 .canvas-container {
@@ -57,4 +107,8 @@ canvas {
     height: auto; /* 縦横比を保持する */
     display: block; /* 不要な余白を削除 */
     border: 1px solid #ccc; /* デバッグ用に枠線を追加 */
+
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }

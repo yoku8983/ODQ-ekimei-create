@@ -11,31 +11,61 @@
         <h1 style="font-size: 2.5em; font-weight: bold; text-transform: uppercase; text-align: center; margin: 20px 0;">
             小田急駅名標ジェネレーター
         </h1>
-        <p style="font-size: 1em; text-align: center; margin: 10px 20px; line-height: 1.5;">
-            小田急の駅名標を作成できます。現行版のデザイン準拠。フォントは一部現物と異なります、ご了承ください。</br>
-            駅名が短い場合は横幅カツカツになってしまうので、入力フォームに適宜スペースを入れて調整してください（現在改良中）。</br>
-            商用非商用を問わず利用、転載、改変は自由ですが、自作発言や再配布はお断りします。転載利用時の連絡、クレジット追記も不要です。</br>
+        <p style="font-size: 1em; text-align: left; margin: 10px 20px; line-height: 1.5;">
+            小田急の駅名標を作成できます。
+            <ul>
+            <li>現行版のデザイン準拠。フォントは現物と異なります、ご了承ください。</li>
+            <li>駅名が短い場合は横幅カツカツになってしまうので、入力フォームに適宜スペースを入れて調整してください（現在改良中）。</li>
+            <li>非営利に限り利用、転載、改変は自由とします。転載利用時の連絡、クレジット追記も不要です。</li>
+            <li>禁止行為：営利目的での利用。自作発言や再配布。公序良俗に反する使い方または企業のイメージを損なう使い方。</li>
+            <li>個人で楽しむ範囲で、常識的な使い方をしてください。以上の事項が守られない場合は公開を停止します。</li>
+            </ul>
         </p>
     </header>
     <!-- 入力フォーム -->
     <div class="form">
-        <label>駅名（漢字）: <input type="text" id="stationNameKanji" value="はるひ野" /></label><br />
-        <label>駅名（ひらがな）: <input type="text" id="stationNameHiragana" value="はるひの" /></label><br />
-        <label>駅名（ローマ字）: <input type="text" id="stationNameRomaji" value="Haruhino" /></label><br />
-        <br />
-        <label>前駅名（漢字）: <input type="text" id="previousStationNameKanji" value="黒川" /></label><br />
-        <label>前駅名（ローマ字）: <input type="text" id="previousStationNameRomaji" value="Kurokawa" /></label><br />
-        <br />
-        <label>次駅名（漢字）: <input type="text" id="nextStationNameKanji" value="小田急永山" /></label><br />
-        <label>次駅名（ローマ字）: <input type="text" id="nextStationNameRomaji" value="Odakyu-Nagayama" /></label><br />
-        <br />
-        <label>現在駅ナンバリング（路線記号）: <input type="text" id="currentStationSymbol"  class="small-input"  value="OT" /></label><br />
-        <label>現在駅ナンバリング（数字）: <input type="text" id="currentStationNumber"  class="small-input"  value="04" /></label><br />
-        <label>次駅ナンバリング（路線記号）: <input type="text" id="nextStationSymbol"  class="small-input"  value="OT" /></label><br />
-        <label>次駅ナンバリング（数字）: <input type="text" id="nextStationNumber"  class="small-input"  value="05" /></label><br />
+        <!-- 駅名 -->
+        <div class="form-row">
+            <span class="form-label">駅名（漢字：ひらがな：ローマ字）</span>
+            <input type="text" class="form-input" id="stationNameKanji" placeholder="漢字" value="はるひ野" />
+            <input type="text" class="form-input" id="stationNameHiragana" placeholder="ひらがな" value="はるひの" />
+            <input type="text" class="form-input" id="stationNameRomaji" placeholder="ローマ字" value="Haruhino" />
+        </div>
+    
+        <!-- 前駅名 -->
+        <div class="form-row">
+            <span class="form-label">前駅名（漢字：ローマ字）</span>
+            <input type="text" class="form-input" id="previousStationNameKanji" placeholder="漢字" value="黒川" />
+            <input type="text" class="form-input" id="previousStationNameRomaji" placeholder="ローマ字" value="Kurokawa" />
+        </div>
+    
+        <!-- 次駅名 -->
+        <div class="form-row">
+            <span class="form-label">次駅名（漢字：ローマ字）</span>
+            <input type="text" class="form-input" id="nextStationNameKanji" placeholder="漢字" value="小田急永山" />
+            <input type="text" class="form-input" id="nextStationNameRomaji" placeholder="ローマ字" value="Odakyu-Nagayama" />
+        </div>
+    
+        <!-- 現在駅ナンバリング -->
+        <div class="form-row">
+            <span class="form-label">現在駅ナンバリング（路線記号：数字）</span>
+            <input type="text" class="form-input small-input" id="currentStationSymbol" placeholder="記号" value="OT" />
+            <input type="text" class="form-input small-input" id="currentStationNumber" placeholder="数字" value="04" />
+        </div>
+    
+        <!-- 次駅ナンバリング -->
+        <div class="form-row">
+            <span class="form-label">次駅ナンバリング（路線記号：数字）</span>
+            <input type="text" class="form-input small-input" id="nextStationSymbol" placeholder="記号" value="OT" />
+            <input type="text" class="form-input small-input" id="nextStationNumber" placeholder="数字" value="05" />
+        </div>
+
         <button id="generateButton">駅名標を生成</button>
-        <button id="saveButton">画像を保存</button>
+        <button id="saveButton">生成した画像を保存</button>
+        <button id="clearButton">生成内容のクリア</button>
     </div>
+    
+    
 
     <!-- Canvasエリア -->
     <!-- Canvasをレスポンシブで縮小表示できるようにdivでラップ -->

@@ -150,7 +150,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // 初回描画を自動実行
     drawStationName(); // 初回描画関数を呼び出し
 
+    // 描画をクリアして背景画像を再描画する関数
+    function clearCanvas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(bgImage, 0, 0, canvas.width, canvas.height); // 背景画像を再描画
+    }
 
+    // クリアボタンのイベントリスナーを追加
+    document.getElementById('clearButton').addEventListener('click', clearCanvas);
+
+    
     function saveCanvas() {
         const link = document.createElement('a');
         link.download = 'station-sign.png';
