@@ -19,6 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
         ctx.drawImage(bgImage, 0, 0, canvas.width, canvas.height);
     };
 
+    // 非表示用フラグ
+    let hideCurrentNumber = false;
+    let hideNextNumber = false;
+
+
+
+
+
     // テキスト描画関数
     function drawText(ctx, text, x, y, fontSize, maxWidth, fontFamily, color = '#000000', align = 'center') {
         ctx.textAlign = align;
@@ -107,42 +115,46 @@ document.addEventListener("DOMContentLoaded", function () {
         const stationNumberColor = '#028CD4';
 
         // 現在駅ナンバリング
-        drawTwoLineTextInRoundedRect(
-            ctx,
-            canvas.width / 2 - stationKanjiWidth / 1.8 - 120,
-            70, // Y座標
-            110, // 矩形の幅
-            110,
-            50,
-            "#FFFFFF",
-            stationNumberColor,
-            stationNumberColor,
-            9,
-            currentStationSymbol,
-            currentStationNumber,
-            35,
-            54,
-            "FrutigerBold"
-        );
+        if (!hideCurrentNumber) {
+            drawTwoLineTextInRoundedRect(
+                ctx,
+                canvas.width / 2 - stationKanjiWidth / 1.8 - 120,
+                70, // Y座標
+                110, // 矩形の幅
+                110,
+                50,
+                "#FFFFFF",
+                stationNumberColor,
+                stationNumberColor,
+                9,
+                currentStationSymbol,
+                currentStationNumber,
+                35,
+                54,
+                "FrutigerBold"
+            );
+        }
 
         // 次駅ナンバリング
-        drawTwoLineTextInRoundedRect(
-            ctx,
-            canvas.width - 120, // X座標
-            125, // Y座標
-            80, // 矩形の幅
-            80,  // 矩形の高さ
-            37,  //矩形のラジアン
-            "#FFFFFF",  // 矩形の塗りつぶしの色
-            stationNumberColor,
-            stationNumberColor,
-            6,  // 矩形の枠線の太さ
-            nextStationSymbol,
-            nextStationNumber,
-            25,  // 矩形の上段文字サイズ
-            38,  // 矩形の下段文字サイズ
-            "FrutigerBold"
-        );
+        if (!hideNextNumber) {
+            drawTwoLineTextInRoundedRect(
+                ctx,
+                canvas.width - 120, // X座標
+                125, // Y座標
+                80, // 矩形の幅
+                80,  // 矩形の高さ
+                37,  //矩形のラジアン
+                "#FFFFFF",  // 矩形の塗りつぶしの色
+                stationNumberColor,
+                stationNumberColor,
+                6,  // 矩形の枠線の太さ
+                nextStationSymbol,
+                nextStationNumber,
+                25,  // 矩形の上段文字サイズ
+                38,  // 矩形の下段文字サイズ
+                "FrutigerBold"
+            );
+        }
     }
 
     document.getElementById('generateButton').addEventListener('click', drawStationName);
@@ -156,10 +168,22 @@ document.addEventListener("DOMContentLoaded", function () {
         ctx.drawImage(bgImage, 0, 0, canvas.width, canvas.height); // 背景画像を再描画
     }
 
+
+
+    document.getElementById('hideCurrentNumber').addEventListener('change', function () {
+        hideCurrentNumber = this.checked;
+        drawStationName(); // 再描画
+    });
+
+    document.getElementById('hideNextNumber').addEventListener('change', function () {
+        hideNextNumber = this.checked;
+        drawStationName(); // 再描画
+    });
+
+
     // クリアボタンのイベントリスナーを追加
     document.getElementById('clearButton').addEventListener('click', clearCanvas);
 
-    
     function saveCanvas() {
         const link = document.createElement('a');
         link.download = 'station-sign.png';
