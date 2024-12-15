@@ -80,6 +80,9 @@ footer {
     background-color: #f0f0f0; /* 背景色をつける場合 */
 }
 
+ul li {
+    font-size: 0.9em;
+}
 
 button {
     margin: 10px;
