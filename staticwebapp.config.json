@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "route": "/*",
+      "redirect": "https://odq-stasigin-gen.net/",
+      "statusCode": 301,
+      "conditions": {
+        "host": "www.odq-stasigin-gen.net"
+      }
+    }
+  ]
+}
