@@ -93,11 +93,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const currentStationNumber = document.getElementById('currentStationNumber').value;
         const nextStationNumber = document.getElementById('nextStationNumber').value;
 
-        // 駅名部分
+        // 駅名部分の描画（中央揃え）
         drawText(ctx, stationNameKanji, canvas.width / 2, 115, 100, 750, "Mplus2c", "#000000");
-        const stationKanjiWidth = ctx.measureText(stationNameKanji).width; // 幅を直接取得
-        drawText(ctx, stationNameHiragana, canvas.width / 2, 330, 55, 380, "Mplus2c", "#000000");
+        const stationKanjiWidth = ctx.measureText(stationNameKanji).width;
         drawText(ctx, stationNameRomaji, canvas.width / 2, 190, 60, 550, "VialogLT", "#000000");
+        const stationRomajiWidth = ctx.measureText(stationNameRomaji).width;
+        drawText(ctx, stationNameHiragana, canvas.width / 2, 330, 55, 380, "Mplus2c", "#000000");
+
+        // 現在駅ナンバリングの配置は、現在駅名（漢字、ローマ字）のうち横長な方の幅を基準にする
+        const maxTextWidth = Math.max(stationKanjiWidth, stationRomajiWidth);
 
         // 前駅名部分
         drawText(ctx, previousStationNameKanji, canvas.width / 40, 330, 42, 170, "Mplus2c", "#000000", 'left');
@@ -111,14 +115,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const stationNumberColor = '#028CD4';
 
+        // 現在駅表記の左端の座標（画像中央からテキスト幅の半分を引く）
+        const stationLeftX = canvas.width / 2 - maxTextWidth / 2;
+
+        // 現在駅ナンバリング矩形のサイズと駅名との余白（調整可能）
+        const margin = 35;
+        const rectWidth = 110; 
+
+        // 現在駅ナンバリング矩形を駅名の左側に配置する場合
+        const rectX = stationLeftX - margin - rectWidth;
+
         // 現在駅ナンバリング
         if (!hideCurrentNumber) {
             drawTwoLineTextInRoundedRect(
                 ctx,
-                canvas.width / 2 - stationKanjiWidth / 1.8 - 120,
-                70, // Y座標
-                110, // 矩形の幅
-                110,
+                rectX,       // X座標を調整
+                70,          // Y座標（必要に応じて調整）
+                rectWidth,   // 矩形の幅
+                110,         // 矩形の高さ
                 50,
                 "#FFFFFF",
                 stationNumberColor,
