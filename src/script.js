@@ -157,6 +157,38 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // --- 追加機能: 駅名パターン自動補完 ---
+    const stationPatternSelect = document.getElementById('stationPatternSelect');
+    // stationPatterns 配列からプルダウンの option を生成
+    stationPatterns.forEach((pattern, index) => {
+    const option = document.createElement('option');
+    option.value = index; // インデックスを値として使用
+    option.textContent = pattern.stationNameKanji; // 表示は漢字駅名
+    stationPatternSelect.appendChild(option);
+    });
+
+    // 補完ボタンのクリックイベントを追加
+    document.getElementById('completeButton').addEventListener('click', function() {
+    const selectedIndex = stationPatternSelect.value;
+    if (selectedIndex !== "") {
+        const pattern = stationPatterns[selectedIndex];
+        document.getElementById('stationNameKanji').value = pattern.stationNameKanji;
+        document.getElementById('stationNameHiragana').value = pattern.stationNameHiragana;
+        document.getElementById('stationNameRomaji').value = pattern.stationNameRomaji;
+        document.getElementById('previousStationNameKanji').value = pattern.previousStationNameKanji;
+        document.getElementById('previousStationNameRomaji').value = pattern.previousStationNameRomaji;
+        document.getElementById('nextStationNameKanji').value = pattern.nextStationNameKanji;
+        document.getElementById('nextStationNameRomaji').value = pattern.nextStationNameRomaji;
+        document.getElementById('currentStationSymbol').value = pattern.currentStationSymbol;
+        document.getElementById('currentStationNumber').value = pattern.currentStationNumber;
+        document.getElementById('nextStationSymbol').value = pattern.nextStationSymbol;
+        document.getElementById('nextStationNumber').value = pattern.nextStationNumber;
+
+        // 補完後、キャンバスを再描画（任意）
+        drawStationName();
+    }
+    });
+
     document.getElementById('generateButton').addEventListener('click', drawStationName);
 
     // 初回描画を自動実行
