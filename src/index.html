@@ -26,13 +26,10 @@
         <!-- Twitterシェアボタン -->
         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
         <!-- LINEシェアボタン -->
-        <a href="https://social-plugins.line.me/lineit/share?url=https://odq-stasigin-gen.net/" target="_blank" title="LINEでシェアする">
-            <img src="https://scdn.line-apps.com/n/line_it/button_ja.png" alt="LINEでシェアする" style="border: none;">
-        </a>
+        <div class="line-it-button" data-lang="ja" data-type="share-a" data-env="REAL" data-url="https://odq-stasigin-gen.net/" data-color="default" data-size="small" data-count="true" data-ver="3" ></div>
         <!-- Facebookシェアボタン -->
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://odq-stasigin-gen.net/" target="_blank" title="Facebookでシェアする" style="margin-left: 10px;">
-            Facebookでシェア
-        </a>
+        <div id="fb-root"></div>
+        <div class="fb-share-button" data-href="https://odq-stasigin-gen.net/" data-layout="button" data-size="small"></div>
 
         <p style="font-size: 1em; text-align: left; margin: 10px 20px; line-height: 1.5;">
             小田急の駅名標を作成できます。PCからの利用推奨。スマホだと一部のフォントが正しく表示出来ない場合があります。<br>
@@ -143,9 +140,12 @@
         </div>
         </footer>
 
-    <!-- スクリプト -->
+    <!-- ボタン動作や駅名リスト読み込みの基本スクリプト -->
     <script src="script.js"></script>
     <script src="station-patterns.js"></script>
+    <!-- SNS投稿系のスクリプト -->    
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v18.0" nonce="random_nonce"></script>
 </body>
 </html>
