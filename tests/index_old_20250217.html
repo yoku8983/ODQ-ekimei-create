@@ -53,6 +53,16 @@
 
     <!-- 入力フォーム -->
     <div class="form">
+
+        <!-- 駅名パターン自動補完用 -->
+        <div class="form-row">
+            <span class="form-label">実在する駅名から選ぶ</span>
+            <select id="stationPatternSelect">
+                <option value="">選択してください</option>
+            </select>
+            <button id="completeButton" class="button-secondary">この駅名で入力する</button>
+        </div>
+
         <!-- 駅名 -->
         <div class="form-row">
             <span class="form-label">駅名（漢字：ひらがな：ローマ字）</span>
@@ -91,19 +101,9 @@
             非表示：<input type="checkbox" id="hideNextNumber" />
         </div>
 
-
-        <!-- 駅名パターン自動補完用 -->
-        <div class="form-row">
-            <span class="form-label">実在する駅名から選ぶ</span>
-            <select id="stationPatternSelect">
-                <option value="">選択してください</option>
-            </select>
-            <button id="completeButton">入力フォーム上書き</button>
-        </div>
-
-        <button id="generateButton">駅名標を生成</button>
-        <button id="saveButton">生成した画像を保存</button>
-        <button id="clearButton">生成画像のクリア</button>
+        <button id="generateButton" class="button-primary">駅名標を生成</button>
+        <button id="saveButton" class="button-primary">生成した画像を保存</button>
+        <button id="clearButton" class="button-utility">生成画像のクリア</button>
     </div>
 
     <!-- Canvasエリア -->

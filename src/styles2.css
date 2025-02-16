@@ -1,0 +1,231 @@
+/* フォントの読み込み */
+@font-face {
+    font-family: 'FrutigerBold';
+    src: url('fonts/Frutiger-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mplus2c';
+    src: url('fonts/Mplus2c-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'VialogLT';
+    src: url('fonts/VialogLT-Regular.ttf') format('truetype');
+}
+
+:root {
+    --odakyu-blue: #028CD4;
+    --odakyu-dark-blue: #0269A3;
+    --light-gray: #f5f5f5;
+    --border-gray: #e0e0e0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ヘッダー部分 */
+.site-header {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.site-title {
+    color: var(--odakyu-blue);
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 16px 0;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 16px 0;
+    padding: 12px;
+    background: var(--light-gray);
+    border-radius: 8px;
+}
+
+/* メインフォーム */
+.form-container {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.form-section {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.form-section:last-child {
+    border-bottom: none;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: center;
+}
+
+.form-label {
+    flex: 0 0 220px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-inputs {
+    flex: 1;
+    display: flex;
+    gap: 12px;
+}
+
+.form-input {
+    padding: 8px 12px;
+    border: 2px solid var(--border-gray);
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    border-color: var(--odakyu-blue);
+    outline: none;
+}
+
+.form-input.small-input {
+    width: 80px;
+}
+
+/* ボタングループ */
+.button-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.button-primary {
+    background: var(--odakyu-blue);
+    color: white;
+    border: none;
+}
+
+.button-primary:hover {
+    background: var(--odakyu-dark-blue);
+}
+
+.button-secondary {
+    background: white;
+    color: var(--odakyu-blue);
+    border: 2px solid var(--odakyu-blue);
+}
+
+.button-secondary:hover {
+    background: var(--light-gray);
+}
+
+/* キャンバスエリア */
+.canvas-container {
+    margin-top: 24px;
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background: var(--light-gray);
+}
+
+/* 注意事項セクション */
+.notes-section {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.notes-header {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 16px;
+}
+
+.notes-list {
+    margin: 0;
+    padding-left: 24px;
+}
+
+.notes-list li {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+/* フッター */
+.site-footer {
+    margin-top: 24px;
+    padding: 24px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.changelog {
+    margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-label {
+        flex: none;
+        margin-bottom: 8px;
+    }
+
+    .form-inputs {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
