@@ -23,18 +23,21 @@
         </h1>
         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
         <p style="font-size: 1em; text-align: left; margin: 10px 20px; line-height: 1.5;">
-            小田急の駅名標を作成できます。
+            小田急の駅名標を作成できます。PCからの利用推奨。スマホだと一部のフォントが正しく表示出来ない場合があります。<br>
+            駅名が短い場合は横幅カツカツになってしまうので、入力フォームに適宜スペースを入れて調整してください。（現在改良中）<br>
+            駅名の長さによってはナンバリング部が被ってしまう場合があります（現在改良中）
+
             <ul>
-            <li>現行版のデザイン準拠。フォントは現物と異なります、ご了承ください。</li>
-            <li>スマホだと一部のフォントが正しく表示出来ない場合があります。PCからの利用推奨。</li>
-            <li>駅名が短い場合は横幅カツカツになってしまうので、入力フォームに適宜スペースを入れて調整してください（現在改良中）。</li>
-            <li>非営利に限り利用、転載、改変は自由とします。転載利用時の連絡、クレジット追記も不要です。</li>
-            <li><b>禁止行為：営利目的での利用。自作発言や再配布。公序良俗に反する使い方または企業のイメージを損なう使い方。</b></li>
-            <li><b>個人で楽しむ範囲で、常識的な使い方をしてください。</b>以上の事項が守られない場合は公開を停止します。</li>
-            <li>本作品は非公式の二次創作物です。<b>本ページに関する鉄道会社への問い合わせは業務の妨げになりますので絶対におやめください。</b></li>
-            <li>本作品に使用されているデザイン、名称等はそれぞれの権利者に帰属します。</li>
-            <li>本データや作品の使用によって生じた損害や問題について、制作者は一切の責任を負いません。</li>
-            <li>本件に関するお問い合わせ、改善要望、苦情などは<a href="https://x.com/k_ts5400">作成者のX（旧Twitter）</a>でDMにてご連絡ください。</li>
+                <li>現行版のデザイン準拠。フォントは現物と異なります、ご了承ください。</li>
+                <li><b>現在非対応</b>：分岐駅やスイッチバック駅の表記（新百合、相模大野、藤沢など）、中韓駅名表記、乗換路線表記（下北沢、海老名など）。気が向いたら直すかも。</li>
+                <li>常用漢字でないもの、旧字体を含む一部駅名（鵠沼海岸、螢田など）はどうしてもフォント表示おかしくなってしまうようです。ご了承ください</li>
+                <li>非営利に限り利用、転載、改変は自由とします。転載利用時の連絡、クレジット追記も不要です。</li>
+                <li><b>禁止行為：営利目的での利用。自作発言や再配布。公序良俗に反する使い方または企業のイメージを損なう使い方。</b></li>
+                <li><b>個人で楽しむ範囲で、常識的な使い方をしてください。</b>以上の事項が守られない場合は公開を停止します。</li>
+                <li>本作品は非公式の二次創作物です。<b>本ページに関する鉄道会社への問い合わせは業務の妨げになりますので絶対におやめください。</b></li>
+                <li>本作品に使用されているデザイン、名称等はそれぞれの権利者に帰属します。</li>
+                <li>本データや作品の使用によって生じた損害や問題について、制作者は一切の責任を負いません。</li>
+                <li>本件に関するお問い合わせ、改善要望、苦情などは<a href="https://x.com/k_ts5400">作成者のX（旧Twitter）</a>でDMにてご連絡ください。</li>
             </ul>
         </p>
     </header>
@@ -79,12 +82,20 @@
             非表示：<input type="checkbox" id="hideNextNumber" />
         </div>
 
+
+        <!-- 駅名パターン自動補完用 -->
+        <div class="form-row">
+            <span class="form-label">実在する駅名から選ぶ</span>
+            <select id="stationPatternSelect">
+                <option value="">選択してください</option>
+            </select>
+            <button id="completeButton">入力フォーム上書き</button>
+        </div>
+
         <button id="generateButton">駅名標を生成</button>
         <button id="saveButton">生成した画像を保存</button>
         <button id="clearButton">生成画像のクリア</button>
     </div>
-    
-    
 
     <!-- Canvasエリア -->
     <!-- Canvasをレスポンシブで縮小表示できるようにdivでラップ -->
@@ -93,12 +104,43 @@
     </div>
 
     <footer>
-        <p>© 2024 Nu
-        </p>
+        <p>© 2024 Nu</p>
+        <hr>
+        <div class="footer-content">
+
+        </div>
     </footer>
+
+    <footer>
+        <p>© 2024 Nu</p>
+        <div class="footer-content">
+            <h3>変更履歴</h3>
+            <ul>
+            <li>
+                <strong>v1.2.0 - 2025/2/17</strong>
+                <ul>
+                <li>実在駅名パターンの補完機能を追加。UI微調整。注意事項の文言微修正</li>
+                </ul>
+            </li>
+            <li>
+                <strong>v1.1.0 - 2025/2/2</strong>
+                <ul>
+                <li>カスタムドメイン取得に伴う微修正</li>
+                </ul>
+            </li>
+            <li>
+                <strong>v1.0.0 - 2024/12/15</strong>
+                <ul>
+                <li>初期リリース</li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+        </footer>
 
     <!-- スクリプト -->
     <script src="script.js"></script>
+    <script src="station-patterns.js"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>

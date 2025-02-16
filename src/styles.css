@@ -74,10 +74,15 @@ body {
 
 
 footer {
-    text-align: center;
-    margin-top: 20px; /* 上に余白を追加 */
-    padding: 10px;    /* 内側の余白を追加 */
-    background-color: #f0f0f0; /* 背景色をつける場合 */
+    text-align: center; /* フッター全体は中央揃え */
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+  }
+  
+/* .footer-content 内は左揃えにする */
+footer .footer-content {
+    text-align: left;
 }
 
 ul li {

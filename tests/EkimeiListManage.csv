@@ -1,0 +1,71 @@
+stationNameKanji,stationNameHiragana,stationNameRomaji,previousStationNameKanji,previousStationNameRomaji,nextStationNameKanji,nextStationNameRomaji,currentStationSymbol,currentStationNumber,nextStationSymbol,nextStationNumber
+Vh,‚µ‚ñ‚¶‚ã‚­,Shinjuku,,,“ìVh,Minami-Shinjuku,OH,01,OH,02
+“ìVh,‚İ‚È‚İ‚µ‚ñ‚¶‚ã‚­,Minami-Shinjuku,Vh,Shinjuku,Q‹{‹´,Sangubashi,OH,02,OH,03
+Q‹{‹´,‚³‚ñ‚®‚¤‚Î‚µ,Sangubashi,“ìVh,Minami-Shinjuku,‘ãX–Ø”ª”¦,Yoyogi-Hachiman,OH,03,OH,04
+‘ãX–Ø”ª”¦,‚æ‚æ‚¬‚Í‚¿‚Ü‚ñ,Yoyogi-Hachiman,Q‹{‹´,Sangubashi,‘ãX–ØãŒ´,Yoyogi-Uehara,OH,04,OH,05
+‘ãX–ØãŒ´,‚æ‚æ‚¬‚¤‚¦‚Í‚ç,Yoyogi-Uehara,‘ãX–Ø”ª”¦,Yoyogi-Hachiman,“Œ–k‘ò,Higashi-Kitazawa,OH,05,OH,06
+“Œ–k‘ò,‚Ğ‚ª‚µ‚«‚½‚´‚í,Higashi-Kitazawa,‘ãX–ØãŒ´,Yoyogi-Uehara,‰º–k‘ò,Shimo-Kitazawa,OH,06,OH,07
+‰º–k‘ò,‚µ‚à‚«‚½‚´‚í,Shimo-Kitazawa,“Œ–k‘ò,Higashi-Kitazawa,¢“c’J‘ã“c,Setagaya-Daita,OH,07,OH,08
+¢“c’J‘ã“c,‚¹‚½‚ª‚â‚¾‚¢‚¾,Setagaya-Daita,‰º–k‘ò,Shimo-Kitazawa,”~ƒ–‹u,Umegaoka,OH,08,OH,09
+”~ƒ–‹u,‚¤‚ß‚ª‚¨‚©,Umegaoka,¢“c’J‘ã“c,Setagaya-Daita,‹“¿›,Gotokuji,OH,09,OH,10
+‹“¿›,‚²‚¤‚Æ‚­‚¶,Gotokuji,”~ƒ–‹u,Umegaoka,Œo“°,Kyodo,OH,10,OH,11
+Œo“°,‚«‚å‚¤‚Ç‚¤,Kyodo,‹“¿›,Gotokuji,çÎ‘D‹´,Chitose-Funabashi,OH,11,OH,12
+çÎ‘D‹´,‚¿‚Æ‚¹‚Ó‚È‚Î‚µ,Chitose-Funabashi,Œo“°,Kyodo,‘ctƒ–’J‘å‘ ,Soshigaya-Okura,OH,12,OH,13
+‘ctƒ–’J‘å‘ ,‚»‚µ‚ª‚â‚¨‚¨‚­‚ç,Soshigaya-Okura,çÎ‘D‹´,Chitose-Funabashi,¬éŠw‰€‘O,Seijogakuen-mae,OH,13,OH,14
+¬éŠw‰€‘O,‚¹‚¢‚¶‚å‚¤‚ª‚­‚¦‚ñ‚Ü‚¦,Seijogakuen-mae,‘ctƒ–’J‘å‘ ,Soshigaya-Okura,Šì‘½Œ©,Kitami,OH,14,OH,15
+Šì‘½Œ©,‚«‚½‚İ,Kitami,¬éŠw‰€‘O,Seijogakuen-mae,],Komae,OH,15,OH,16
+],‚±‚Ü‚¦,Komae,Šì‘½Œ©,Kitami,˜aò‘½–€ì,Izumi-Tamagawa,OH,16,OH,17
+˜aò‘½–€ì,‚¢‚¸‚İ‚½‚Ü‚ª‚í,Izumi-Tamagawa,],Komae,“oŒË,Noborito,OH,17,OH,18
+“oŒË,‚Ì‚Ú‚è‚Æ,Noborito,˜aò‘½–€ì,Izumi-Tamagawa,Œüƒ–‹u—V‰€,Mukogaoka-yuen,OH,18,OH,19
+Œüƒ–‹u—V‰€,‚Ş‚±‚¤‚ª‚¨‚©‚ä‚¤‚¦‚ñ,Mukogaoka-yuen,“oŒË,Noborito,¶“c,Ikuta,OH,19,OH,20
+¶“c,‚¢‚­‚½,Ikuta,Œüƒ–‹u—V‰€,Mukogaoka-yuen,“Ç”„ƒ‰ƒ“ƒh‘O,Yomiuri-Land-mae,OH,20,OH,21
+“Ç”„ƒ‰ƒ“ƒh‘O,‚æ‚İ‚¤‚èƒ‰ƒ“ƒh‚Ü‚¦,Yomiuri-Land-mae,¶“c,Ikuta,•S‡ƒ–‹u,Yurigaoka,OH,21,OH,22
+•S‡ƒ–‹u,‚ä‚è‚ª‚¨‚©,Yurigaoka,“Ç”„ƒ‰ƒ“ƒh‘O,Yomiuri-Land-mae,V•S‡ƒ–‹u,Shin-Yurigaoka,OH,22,OH,23
+V•S‡ƒ–‹u,‚µ‚ñ‚ä‚è‚ª‚¨‚©,Shin-Yurigaoka,•S‡ƒ–‹u,Yurigaoka,Š`¶,Kakio,OH,23,OH,24
+Š`¶,‚©‚«‚¨,Kakio,V•S‡ƒ–‹u,Shin-Yurigaoka,’ßì,Tsurukawa,OH,24,OH,25
+’ßì,‚Â‚é‚©‚í,Tsurukawa,Š`¶,Kakio,‹ÊìŠw‰€‘O,Tamagawagakuen-mae,OH,25,OH,26
+‹ÊìŠw‰€‘O,‚½‚Ü‚ª‚í‚ª‚­‚¦‚ñ‚Ü‚¦,Tamagawagakuen-mae,’ßì,Tsurukawa,’¬“c,Machida,OH,26,OH,27
+’¬“c,‚Ü‚¿‚¾,Machida,‹ÊìŠw‰€‘O,Tamagawagakuen-mae,‘Š–Í‘å–ì,Sagami-Ono,OH,27,OH,28
+‘Š–Í‘å–ì,‚³‚ª‚İ‚¨‚¨‚Ì,Sagami-Ono,’¬“c,Machida,¬“c‹}‘Š–ÍŒ´,Odakyu Sagamihara,OH,28,OH,29
+¬“c‹}‘Š–ÍŒ´,‚¨‚¾‚«‚ã‚¤‚³‚ª‚İ‚Í‚ç,Odakyu Sagamihara,‘Š–Í‘å–ì,Sagami-Ono,‘Š•‘ä‘O,Sobudai-mae,OH,29,OH,30
+‘Š•‘ä‘O,‚»‚¤‚Ô‚¾‚¢‚Ü‚¦,Sobudai-mae,¬“c‹}‘Š–ÍŒ´,Odakyu Sagamihara,ÀŠÔ,Zama,OH,30,OH,31
+ÀŠÔ,‚´‚Ü,Zama,‘Š•‘ä‘O,Sobudai-mae,ŠC˜V–¼,Ebina,OH,31,OH,32
+ŠC˜V–¼,‚¦‚Ñ‚È,Ebina,ÀŠÔ,Zama,Œú–Ø,Atsugi,OH,32,OH,33
+Œú–Ø,‚ ‚Â‚¬,Atsugi,ŠC˜V–¼,Ebina,–{Œú–Ø,Hon-Atsugi,OH,33,OH,34
+–{Œú–Ø,‚Ù‚ñ‚ ‚Â‚¬,Hon-Atsugi,Œú–Ø,Atsugi,ˆ¤bÎ“c,Aiko-Ishida,OH,34,OH,35
+ˆ¤bÎ“c,‚ ‚¢‚±‚¤‚¢‚µ‚¾,Aiko-Ishida,–{Œú–Ø,Hon-Atsugi,ˆÉ¨Œ´,Isehara,OH,35,OH,36
+ˆÉ¨Œ´,‚¢‚¹‚Í‚ç,Isehara,ˆ¤bÎ“c,Aiko-Ishida,’ßŠª‰·ò,Tsurumaki-onsen,OH,36,OH,37
+’ßŠª‰·ò,‚Â‚é‚Ü‚«‚¨‚ñ‚¹‚ñ,Tsurumaki-onsen,ˆÉ¨Œ´,Isehara,“ŒŠC‘åŠw‘O,Tokaidaigaku-mae,OH,37,OH,38
+“ŒŠC‘åŠw‘O,‚Æ‚¤‚©‚¢‚¾‚¢‚ª‚­‚Ü‚¦,Tokaidaigaku-mae,’ßŠª‰·ò,Tsurumaki-onsen,`–ì,Hadano,OH,38,OH,39
+`–ì,‚Í‚¾‚Ì,Hadano,“ŒŠC‘åŠw‘O,Tokaidaigaku-mae,a‘ò,Shibusawa,OH,39,OH,40
+a‘ò,‚µ‚Ô‚³‚í,Shibusawa,`–ì,Hadano,V¼“c,Shin-Matsuda,OH,40,OH,41
+V¼“c,‚µ‚ñ‚Ü‚Â‚¾,Shin-Matsuda,a‘ò,Shibusawa,ŠJ¬,Kaisei,OH,41,OH,42
+ŠJ¬,‚©‚¢‚¹‚¢,Kaisei,V¼“c,Shin-Matsuda,ŠœR,Kayama,OH,42,OH,43
+ŠœR,‚©‚â‚Ü,Kayama,ŠJ¬,Kaisei,•x…,Tomizu,OH,43,OH,44
+•x…,‚Æ‚İ‚¸,Tomizu,ŠœR,Kayama,å£“c,Hotaruda,OH,44,OH,45
+å£“c,‚Ù‚½‚é‚¾,Hotaruda,•x…,Tomizu,‘«•¿,Ashigara,OH,45,OH,46
+‘«•¿,‚ ‚µ‚ª‚ç,Ashigara,å£“c,Hotaruda,¬“cŒ´,Odawara,OH,46,OH,47
+¬“cŒ´,‚¨‚¾‚í‚ç,Odawara,‘«•¿,Ashigara,” ª”Â‹´,Hakone-Itabashi,OH,47,OH,48
+“Œ—ÑŠÔ,‚Ğ‚ª‚µ‚è‚ñ‚©‚ñ,Higashi-Rinkan,‘Š–Í‘å–ì,Sagami-Ono,’†‰›—ÑŠÔ,Chuo-Rinkan,OE,01,OE,02
+’†‰›—ÑŠÔ,‚¿‚ã‚¤‚¨‚¤‚è‚ñ‚©‚ñ,Chuo-Rinkan,“Œ—ÑŠÔ,Higashi-Rinkan,“ì—ÑŠÔ,Minami-Rinkan,OE,02,OE,03
+“ì—ÑŠÔ,‚İ‚È‚İ‚è‚ñ‚©‚ñ,Minami-Rinkan,’†‰›—ÑŠÔ,Chuo-Rinkan,’ßŠÔ,Tsuruma,OE,03,OE,04
+’ßŠÔ,‚Â‚é‚Ü,Tsuruma,“ì—ÑŠÔ,Minami-Rinkan,‘å˜a,Yamato,OE,04,OE,05
+‘å˜a,‚â‚Ü‚Æ,Yamato,’ßŠÔ,Tsuruma,÷ƒ–‹u,Sakuragaoka,OE,05,OE,06
+÷ƒ–‹u,‚³‚­‚ç‚ª‚¨‚©,Sakuragaoka,‘å˜a,Yamato,‚Àa’J,Koza-Shibuya,OE,06,OE,07
+‚Àa’J,‚±‚¤‚´‚µ‚Ô‚â,Koza-Shibuya,÷ƒ–‹u,Sakuragaoka,’·Œã,Chogo,OE,07,OE,08
+’·Œã,‚¿‚å‚¤‚²,Chogo,‚Àa’J,Koza-Shibuya,Ã“ì‘ä,Shonandai,OE,08,OE,09
+Ã“ì‘ä,‚µ‚å‚¤‚È‚ñ‚¾‚¢,Shonandai,’·Œã,Chogo,˜Z‰ï“ú‘å‘O,Mutsuai-Nichidai-mae,OE,09,OE,10
+˜Z‰ï“ú‘å‘O,‚Ş‚Â‚ ‚¢‚É‚¿‚¾‚¢‚Ü‚¦,Mutsuai-Nichidai-mae,Ã“ì‘ä,Shonandai,‘Ps,Zengyo,OE,10,OE,11
+‘Ps,‚º‚ñ‚¬‚å‚¤,Zengyo,˜Z‰ï“ú‘å‘O,Mutsuai-Nichidai-mae,“¡‘ò–{’¬,Fujisawa-hommachi,OE,11,OE,12
+“¡‘ò–{’¬,‚Ó‚¶‚³‚í‚Ù‚ñ‚Ü‚¿,Fujisawa-hommachi,‘Ps,Zengyo,“¡‘ò,Fujisawa,OE,12,OE,13
+“¡‘ò,‚Ó‚¶‚³‚í,Fujisawa,“¡‘ò–{’¬,Fujisawa-hommachi,–{”À,Hon-Kugenuma,OE,13,OE,14
+–{”À,‚Ù‚ñ‚­‚°‚Ê‚Ü,Hon-Kugenuma,“¡‘ò,Fujisawa,”ÀŠCŠİ,Kugenuma-kaigan,OE,14,OE,15
+”ÀŠCŠİ,‚­‚°‚Ê‚Ü‚©‚¢‚ª‚ñ,Kugenuma-kaigan,–{”À,Hon-Kugenuma,•Ğ£]ƒm“‡,Katase-Enoshima,OE,15,OE,16
+•Ğ£]ƒm“‡,‚©‚½‚¹‚¦‚Ì‚µ‚Ü,Katase-Enoshima,”ÀŠCŠİ,Kugenuma-kaigan,,,OE,16,,
+ŒÜŒ‘ä,‚³‚Â‚«‚¾‚¢,Satsukidai,V•S‡ƒ–‹u,Shin-Yurigaoka,ŒI•½,Kurihira,OT,01,OT,02
+ŒI•½,‚­‚è‚Ğ‚ç,Kurihira,ŒÜŒ‘ä,Satsukidai,•ì,Kurokawa,OT,02,OT,03
+•ì,‚­‚ë‚©‚í,Kurokawa,ŒI•½,Kurihira,‚Í‚é‚Ğ–ì,Haruhino,OT,03,OT,04
+‚Í‚é‚Ğ–ì,‚Í‚é‚Ğ‚Ì,Haruhino,•ì,Kurokawa,¬“c‹}‰iR,Odakyu Nagayama,OT,04,OT,05
+¬“c‹}‰iR,‚¨‚¾‚«‚ã‚¤‚È‚ª‚â‚Ü,Odakyu Nagayama,‚Í‚é‚Ğ–ì,Haruhino,¬“c‹}‘½–€ƒZƒ“ƒ^[,Odakyu Tama Center,OT,05,OT,06
+¬“c‹}‘½–€ƒZƒ“ƒ^[,‚¨‚¾‚«‚ã‚¤‚½‚ÜƒZƒ“ƒ^[,Odakyu Tama Center,¬“c‹}‰iR,Odakyu Nagayama,“‚–Ø“c,Karakida,OT,06,OT,07
+“‚–Ø“c,‚©‚ç‚«‚¾,Karakida,¬“c‹}‘½–€ƒZƒ“ƒ^[,Odakyu Tama Center,,,OT,07,,
