@@ -54,48 +54,48 @@
         <div class="form-section">
             <!-- 駅名 -->
             <div class="form-row">
-            <span class="form-label">駅名（漢字：ひらがな：ローマ字）</span>
+            <span class="form-label">駅名</span>
             <div class="form-inputs">
-                <input type="text" class="form-input" id="stationNameKanji" placeholder="漢字" value="はるひ野" />
-                <input type="text" class="form-input" id="stationNameHiragana" placeholder="ひらがな" value="はるひの" />
-                <input type="text" class="form-input" id="stationNameRomaji" placeholder="ローマ字" value="Haruhino" />
+                <input type="text" class="form-input" id="stationNameKanji" placeholder="漢字" />
+                <input type="text" class="form-input" id="stationNameHiragana" placeholder="ひらがな"  />
+                <input type="text" class="form-input" id="stationNameRomaji" placeholder="ローマ字" />
             </div>
             </div>
 
             <!-- 前駅名 -->
             <div class="form-row">
-            <span class="form-label">前駅名（漢字：ローマ字）</span>
+            <span class="form-label">前駅名</span>
             <div class="form-inputs">
-                <input type="text" class="form-input" id="previousStationNameKanji" placeholder="漢字" value="黒川" />
-                <input type="text" class="form-input" id="previousStationNameRomaji" placeholder="ローマ字" value="Kurokawa" />
+                <input type="text" class="form-input" id="previousStationNameKanji" placeholder="漢字" />
+                <input type="text" class="form-input" id="previousStationNameRomaji" placeholder="ローマ字"  />
             </div>
             </div>
 
             <!-- 次駅名 -->
             <div class="form-row">
-            <span class="form-label">次駅名（漢字：ローマ字）</span>
+            <span class="form-label">次駅名</span>
             <div class="form-inputs">
-                <input type="text" class="form-input" id="nextStationNameKanji" placeholder="漢字" value="小田急永山" />
-                <input type="text" class="form-input" id="nextStationNameRomaji" placeholder="ローマ字" value="Odakyu-Nagayama" />
+                <input type="text" class="form-input" id="nextStationNameKanji" placeholder="漢字" />
+                <input type="text" class="form-input" id="nextStationNameRomaji" placeholder="ローマ字"  />
             </div>
             </div>
 
             <!-- 現在駅ナンバリング -->
             <div class="form-row">
-            <span class="form-label">現在駅ナンバリング（路線記号：数字）</span>
+            <span class="form-label">現在駅ナンバリング</span>
             <div class="form-inputs">
-                <input type="text" class="form-input small-input" id="currentStationSymbol" placeholder="記号" value="OT" />
-                <input type="text" class="form-input small-input" id="currentStationNumber" placeholder="数字" value="04" />
+                <input type="text" class="form-input small-input" id="currentStationSymbol" placeholder="路線記号" />
+                <input type="text" class="form-input small-input" id="currentStationNumber" placeholder="駅名No"  />
                 <label>非表示：<input type="checkbox" id="hideCurrentNumber" /></label>
             </div>
             </div>
 
             <!-- 次駅ナンバリング -->
             <div class="form-row">
-            <span class="form-label">次駅ナンバリング（路線記号：数字）</span>
+            <span class="form-label">次駅ナンバリング</span>
             <div class="form-inputs">
-                <input type="text" class="form-input small-input" id="nextStationSymbol" placeholder="記号" value="OT" />
-                <input type="text" class="form-input small-input" id="nextStationNumber" placeholder="数字" value="05" />
+                <input type="text" class="form-input small-input" id="nextStationSymbol" placeholder="路線記号" />
+                <input type="text" class="form-input small-input" id="nextStationNumber" placeholder="駅名No" />
                 <label>非表示：<input type="checkbox" id="hideNextNumber" /></label>
             </div>
             </div>
@@ -106,6 +106,7 @@
             <button id="generateButton" class="button button-primary">駅名標を生成</button>
             <button id="saveButton" class="button button-primary">生成した画像を保存</button>
             <button id="clearButton" class="button button-utility">生成画像のクリア</button>
+            <button id="formclearButton" class="button button-utility">入力フォームのクリア</button>
         </div>
         </main>
 

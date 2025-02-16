@@ -24,9 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let hideNextNumber = false;
 
 
-
-
-
     // テキスト描画関数
     function drawText(ctx, text, x, y, fontSize, maxWidth, fontFamily, color = '#000000', align = 'center') {
         ctx.textAlign = align;
@@ -213,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // クリアボタンのイベントリスナーを追加
+    // 生成画像サンプルのクリアボタンのイベントリスナーを追加
     document.getElementById('clearButton').addEventListener('click', clearCanvas);
 
     function saveCanvas() {
@@ -222,6 +219,22 @@ document.addEventListener("DOMContentLoaded", function () {
         link.href = canvas.toDataURL('image/png');
         link.click();
     }
+
+    // --- 入力フォームのクリア ---
+    document.getElementById('formclearButton').addEventListener('click', function() {
+        // テキスト入力をクリア
+        document.querySelectorAll('.form-container input[type="text"]').forEach(function(input) {
+            input.value = "";
+        });
+        // セレクトボックスを初期状態に（最初の option を選択）
+        document.querySelectorAll('.form-container select').forEach(function(select) {
+            select.selectedIndex = 0;
+        });
+        // チェックボックスをオフにする
+        document.querySelectorAll('.form-container input[type="checkbox"]').forEach(function(checkbox) {
+            checkbox.checked = false;
+        });
+    });
 
     document.getElementById('saveButton').addEventListener('click', saveCanvas);
 });
